@@ -1,0 +1,18 @@
+
+.bn-toolbar{
+
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+
+    > {
+        width: 100%;
+    }
+
+    .bn-toolbar-actions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
