@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Arquiterure fonts:
+* [1](https://belmirofss.medium.com/minha-nova-estrutura-de-pastas-para-angular-escal%C3%A1vel-limpa-e-f%C3%A1cil-93b6ffb203d9)
+* [2](https://medium.com/gitconnected/the-most-important-basics-of-clean-angular-architecture-8f04a3bde0e6)
+
+src/
+ ├── app/
+ │   ├── core/                # Módulo core: serviços globais (não ligados a um recurso específico)
+ │   ├── shared/              # Módulo compartilhado: componentes, pipes e diretivas reutilizáveis
+ │   ├── features/            # Módulos e componentes específicos de funcionalidades (ex.: users, products)
+ │   ├── app.component.ts     # Componente principal
+ │   ├── app.module.ts        # Módulo raiz
+ │   ├── app-routing.module.ts# Configuração de roteamento
+ ├── assets/                  # Recursos estáticos (imagens, etc.)
+ ├── environments/            # Configurações de ambiente
+ └── main.ts                  # Arquivo de entrada da aplicação

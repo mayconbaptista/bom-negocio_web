@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { BnNavBarComponent } from "./shared/components/bn-nav-bar/bn-nav-bar.component";
+import { BnSidenavComponent } from "./features/bn-sidenav/bn-sidenav.component";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,8 @@ import { BnNavBarComponent } from "./shared/components/bn-nav-bar/bn-nav-bar.com
   imports: [
     RouterOutlet,
     MatSidenavModule,
-    BnNavBarComponent
-],
+    BnSidenavComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,27 +1,40 @@
 
-@for (product of products; track $index) {
+@for(categoria of categories; track $index){
 
-    <mat-card appearance="outlined">
+    <div class="container overflow-hidden gap-3">
 
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <span class="gap-3">{{ categoria.name }}</span>
 
-        <mat-card-content>
-          <span>
-            {{product.description}}
-          </span>
-          <span>
-            {{product.price}}
-          </span>
-        </mat-card-content>
+        <div class="row justify-content-center overflow-hidden gap-3 p-3 mb-2">
 
-        <mat-card-actions>
-          <button mat-button>
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <button mat-button>
-            <mat-icon>share</mat-icon>
-          </button>
-        </mat-card-actions>
+            @for (product of products; track $index) {
+            
+                <mat-card appearance="outlined">
+            
+                    <img mat-card-image class="rounded" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            
+                    <mat-card-content>
+                      <span>
+                        {{product.description}}
+                      </span>
+                      <span>
+                        {{product.price}}
+                      </span>
+                    </mat-card-content>
+            
+                    <mat-card-actions>
+                      <button mat-button>
+                        <mat-icon>favorite</mat-icon>
+                      </button>
+                      <button mat-button>
+                        <mat-icon>share</mat-icon>
+                      </button>
+                    </mat-card-actions>
+            
+                </mat-card>
+            }
 
-    </mat-card>
+        </div>
+
+    </div>
 }

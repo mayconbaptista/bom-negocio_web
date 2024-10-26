@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BnNavBarComponent } from './bn-nav-bar.component';
+import { NotifierComponent } from './notifier.component';
 
-describe('BnNavBarComponent', () => {
-  let component: BnNavBarComponent;
-  let fixture: ComponentFixture<BnNavBarComponent>;
+describe('NotifierComponent', () => {
+  let component: NotifierComponent;
+  let fixture: ComponentFixture<NotifierComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BnNavBarComponent]
+      imports: [NotifierComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BnNavBarComponent);
+    fixture = TestBed.createComponent(NotifierComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
