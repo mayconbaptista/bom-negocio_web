@@ -1,0 +1,15 @@
+<p>products-category-list works!</p>
+
+@for (product of products; track $index) {
+
+    <div class="card" style="width: 18rem;">
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+        <!-- <div class="card-footer">
+          <span class="text-body-secondary">{{ product.name }}</span>
+        </div> -->
+        <div class="card-footer">
+            <span class="text-body-secondary">{{ product.name }}</span>
+        </div>
+    </div>
+}
+

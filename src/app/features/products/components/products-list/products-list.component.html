@@ -1,0 +1,20 @@
+
+<cdk-virtual-scroll-viewport 
+    itemSize="36 rem" 
+    class="infinity-scroll"
+    >
+
+    <div 
+        *cdkVirtualFor="let product of products; track product.id"
+        class="card" 
+        style="width: 18rem; height: 36rem;">
+
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+        <div class="card-footer">
+          <span class="text-body-secondary">{{ product.name }}</span>
+        </div>
+
+    </div>
+
+</cdk-virtual-scroll-viewport>
+

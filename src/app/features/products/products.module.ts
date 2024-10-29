@@ -4,8 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsHomeComponent } from './components/products-home/products-home.component';
 
 const routes: Routes = [
+  {path: 'Home', component: ProductsHomeComponent},
+  {
+    path: 'Category/:id', 
+    loadComponent: () => import('./components/products-category-list/products-category-list.component').then(m => m.ProductsCategoryListComponent)
+  },
+  {
+    path: 'List/:categoryid',
+    loadComponent: () => import('./components/products-list/products-list.component').then(m => m.ProductsListComponent)
+  },
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
-  {path: 'Home', component: ProductsHomeComponent}
+  {path: '**', redirectTo: 'Home', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -17,6 +26,9 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    
   ]
 })
 export class ProductsModule { }

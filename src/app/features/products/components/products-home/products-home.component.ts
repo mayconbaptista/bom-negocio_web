@@ -6,6 +6,9 @@ import { Product } from '../../interfaces/product';
 import { Category } from '../../interfaces/category';
 import { MatDividerModule} from '@angular/material/divider';
 import { MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { RouterLink } from '@angular/router';
+import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-products-home',
@@ -15,7 +18,11 @@ import { MatListModule} from '@angular/material/list';
     MatCardModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    RouterLink,
+    CurrencyPipe,
+    NgOptimizedImage
   ],
   templateUrl: './products-home.component.html',
   styleUrl: './products-home.component.scss'
